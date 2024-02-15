@@ -1,0 +1,15 @@
+- hosts: all
+  vars:
+    number: 10
+    message: 'Hello 2023!!!'
+    condition: True
+    vms:
+    - "web"
+    - "db"
+    - "backup"
+ 
+  tasks:
+  - name: Print List
+    debug:
+      msg: "Value is {{ vms[1] }}"
+
